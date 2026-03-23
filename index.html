@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — HAMRI Mathis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,300&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="cursor" id="cur"></div>
+    <div class="cursor-ring" id="ring"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo Mathis" style="height: 100px; margin-right: 25px;" />
+            <span class="nav-logo">~/portfolio</span>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span>open to opportunities</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#presentation" class="active">index</a>
+                <a href="#projets">projets</a>
+                <a href="#contact">contact</a>
+            </div>
+            <div class="toggle-wrap">
+                <span id="themeLbl">dark</span>
+                <div class="toggle" id="toggleBtn" tabindex="0" role="button" aria-label="Basculer thème">
+                    <div class="toggle-knob"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--  PRÉSENTATION  -->
+    <section id="presentation">
+        <div class="grid-bg"></div>
+        <div class="hero-glow glow-1"></div>
+        <div class="hero-glow glow-2"></div>
+
+        <div class="hero-inner">
+
+            <!-- Colonne gauche -->
+            <div class="hero-left">
+                <div class="hero-eyebrow sr">
+                    <span class="tag">Étudiant en Informatique</span>
+                    <div class="eyebrow-line"></div>
+                </div>
+
+                <h1 class="hero-title sr d1">
+                    <span class="name-line">HAMRI <span class="accent-word">Mathis.</span></span>
+                    <span class="name-line dim-word">Futur ingénieur</span>
+                    <span class="name-line">
+            <span class="accent-word">IA &amp; Data</span> / <span class="red-word">Cyber.</span>
+                    </span>
+                </h1>
+
+                <p class="hero-desc sr d2">
+                    Étudiant passionné en informatique, je prépare un master en
+                    <strong>Intelligence Artificielle &amp; Data</strong> ou <strong>Cybersécurité</strong>. Je réalise des projets concrets pour affûter mes compétences et me préparer au terrain.
+                </p>
+
+                <div class="hero-actions sr d3">
+                    <a href="#projets" class="btn btn-accent">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg> Voir mes projets
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Prendre contact</a>
+                    <a href="cv.pdf" target="_blank" class="btn btn-outline" download>📄 Télécharger CV</a>
+                </div>
+
+                <div class="track-pills sr d4">
+                    <div class="track-pill"><span class="dot dot-g"></span>C / C++</div>
+                    <div class="track-pill"><span class="dot dot-r"></span>Python</div>
+                    <div class="track-pill"><span class="dot dot-b"></span>JS</div>
+                    <div class="track-pill"><span class="dot dot-y"></span>HTML / CSS</div>
+                </div>
+            </div>
+
+            <!-- Colonne droite — terminal -->
+            <div class="hero-right sr d2">
+                <div class="terminal-card">
+                    <div class="term-bar">
+                        <div class="term-dot" style="background:#ff5f56"></div>
+                        <div class="term-dot" style="background:#febc2e"></div>
+                        <div class="term-dot" style="background:#28c840"></div>
+                        <span class="term-title">bash — profil.sh</span>
+                    </div>
+                    <div class="term-body">
+                        <div class="tl"><span class="tp">❯</span><span class="tc">cat profil.json</span></div>
+                        <div class="to">{</div>
+                        <div class="to">&nbsp;&nbsp;"nom": <span>"HAMRI Mathis"</span>,</div>
+                        <div class="to">&nbsp;&nbsp;"formation": <span class="hl-b">"Licence Informatique"</span>,</div>
+                        <div class="to">&nbsp;&nbsp;"objectif": <span class="hl-g">"Master IA/Data ou Cyber"</span>,</div>
+                        <div class="to">&nbsp;&nbsp;"status": <span class="hl-y">"open_to_internship"</span>,</div>
+                        <div class="to">&nbsp;&nbsp;"langages": [<span>"Python"</span>, <span>"C"</span>, <span>"Java"</span>],</div>
+                        <div class="to">&nbsp;&nbsp;"passions": [<span class="hl-r">"DATA"</span>, <span class="hl-g">"IA"</span>, <span class="hl-b">"Cyber"</span>]</div>
+                        <div class="to">}</div>
+                        <br>
+                        <div class="tl"><span class="tp">❯</span><span class="tc">./check_dispo.sh</span></div>
+                        <div class="to hl-g">✔ Recherche — stage / alternance</div>
+                        <br>
+                        <div class="tl"><span class="tp">❯</span><span class="tcursor"></span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--  PROJETS  -->
+    <section id="projets">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label sr">Projets</div>
+                <h2 class="section-title sr d1">Ce que je réalise</h2>
+                <p class="section-sub sr d2">Projets académiques et personnels.</p>
+            </div>
+
+            <div class="projects-list">
+
+                <a href="https://github.com/mathisdjango" target="_blank" style="text-decoration: none; color: inherit;" class="project-item sr">
+                    <div class="proj-icon">🔒</div>
+                    <div class="proj-info">
+                        <div class="proj-name">Scanner de Vulnérabilités et Audit Réseau</div>
+                        <div class="proj-desc">Création d’un outil d’automatisation d’audit de sécurité pour serveurs web. Détection de ports, headers HTTP manquants et versions obsolètes.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="proj-meta">
+                        <div class="proj-type t-ia">Cybersécurité</div>
+                        <span class="proj-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Mathisdjango/ultimate_tic-tac-toe" target="_blank" style="text-decoration: none; color: inherit;" class="project-item sr d1">
+                    <div class="proj-icon">🤖</div>
+                    <div class="proj-info">
+                        <div class="proj-name">IA pour Ultimate Tic-Tac-Toe</div>
+                        <div class="proj-desc">Implémentation d’une IA autonome via l’algorithme Minimax et élagage Alpha-Beta. Optimisation des performances via des heuristiques d’évaluation personnalisées.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">C</span>
+                            <span class="proj-tag">Minimax</span>
+                            <span class="proj-tag">Alpha-Beta</span>
+
+                        </div>
+                    </div>
+                    <div class="proj-meta">
+                        <div class="proj-type t-cyber">IA</div>
+                        <span class="proj-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Mathisdjango/Messagerie-Securisee-Instantanee" target="_blank" style="text-decoration: none; color: inherit;" class="project-item sr d2">
+                    <div class="proj-icon">📱</div>
+                    <div class="proj-info">
+                        <div class="proj-name">Messagerie Instantanée Sécurisée.</div>
+                        <div class="proj-desc">Conception d’une architecture Client/Serveur multi-threadée gérant plusieurs connexions simultanées. Sécurisation des échanges et simulation d’attaques pour tester la résilience.</div>
+                        <div class="proj-tags">
+                            <span class="proj-tag">Python</span>
+                            <span class="proj-tag">Dart/Flutter</span>
+                            <span class="proj-tag">SHA 256</span>
+                            <span class="proj-tag">RSA</span>
+                            <span class="proj-tag">Diffie–Hellman</span>
+                        </div>
+                    </div>
+                    <div class="proj-meta">
+                        <div class="proj-type t-data">Cybersécurité</div>
+                        <span class="proj-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Mathisdjango/Compilateur-Ocaml-vers-MIPS" target="_blank" style="text-decoration: none; color: inherit;" class="project-item sr d3">
+                    <div class="proj-icon ">⚙️</div>
+                    <div class="proj-info ">
+                        <div class="proj-name ">Compilateur OCaml vers MIPS</div>
+                        <div class="proj-desc ">Développement d’un traducteur de langage fonctionnel vers l’assembleur. Analyse lexicale, syntaxique (AST) et génération de code machine optimisé pour processeur MIPS.</div>
+                        <div class="proj-tags ">
+                            <span class="proj-tag ">Ocaml</span>
+                            <span class="proj-tag ">Assembleur MIPS</span>
+                        </div>
+                    </div>
+                    <div class="proj-meta ">
+                        <div class="proj-type t-cyber ">Programmation Système</div>
+                        <span class="proj-arrow ">→</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/Mathisdjango/Application-Mobile-Travel-Organizer-" target="_blank" style="text-decoration: none; color: inherit;" class="project-item sr d4 ">
+                    <div class="proj-icon ">✈️</div>
+                    <div class="proj-info ">
+                        <div class="proj-name ">Application Mobile "Travel Organizer "</div>
+                        <div class="proj-desc ">Création d’une application de gestion de voyages : planification d’itinéraires et suivi de budget. Interface utilisateur moderne et responsive avec gestion d’état complexe</div>
+                        <div class="proj-tags ">
+                            <span class="proj-tag ">Flutter/Dart</span>
+                        </div>
+                    </div>
+                    <div class="proj-meta ">
+                        <div class="proj-type t-ia ">Développement Mobile</div>
+                        <span class="proj-arrow ">→</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container ">
+            <div class="section-header ">
+                <div class="section-label sr ">Contact</div>
+                <h2 class="section-title sr d1 ">Entrons en contact</h2>
+                <p class="section-sub sr d2 ">Stage, alternance, projet collaboratif ou simplement échanger — je lis tous mes messages.</p>
+            </div>
+
+            <div class="contact-grid ">
+
+                <!-- Formulaire -->
+                <div class="contact-form sr d1 ">
+                    <div class="form-row ">
+                        <div class="field ">
+                            <label for="fn ">Nom</label>
+                            <input type="text " id="fn " placeholder="Jean Dupont " />
+                        </div>
+                        <div class="field ">
+                            <label for="fe ">Email</label>
+                            <input type="email " id="fe " placeholder="jean@mail.com " />
+                        </div>
+                    </div>
+                    <div class="field ">
+                        <label for="fs ">Sujet</label>
+                        <input type="text " id="fs " placeholder="Stage / alternance / collaboration… " />
+                    </div>
+                    <div class="field ">
+                        <label for="fm ">Message</label>
+                        <textarea id="fm " placeholder="Décrivez votre demande… "></textarea>
+                    </div>
+                    <button class="btn btn-accent btn-send " id="sendBtn ">
+            <svg width="12 " height="12 " viewBox="0 0 24 24 " fill="none " stroke="currentColor " stroke-width="2.5 " stroke-linecap="round " stroke-linejoin="round ">
+              <line x1="22 " y1="2 " x2="11 " y2="13 "/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2 "/>
+            </svg>
+            Envoyer
+          </button>
+                </div>
+
+                <!-- Infos -->
+                <div class="contact-info-block sr d2 ">
+                    <div class="avail-banner ">
+                        <span class="avail-dot "></span>
+                        <p class="avail-text ">Disponible pour un <strong>stage ou une alternance</strong> dès Septembre 2026</p>
+                    </div>
+                    <div>
+                        <h3 class="contact-headline ">Construisons quelque chose <span class="acc ">ensemble</span>.</h3>
+                        <p class="contact-blurb ">Passionné par l'IA et la cybersécurité, je cherche à rejoindre des équipes ambitieuses qui allient rigueur technique et impact réel.</p>
+                    </div>
+                    <div class="contact-links ">
+                        <a href="mailto:hamrimathis@gmail.com " class="cl ">
+                            <div class="cl-icon ">✉️</div>
+                            <div class="cl-body ">
+                                <div class="cl-name ">Email</div>
+                                <div class="cl-val ">hamrimathis@gmail.com</div>
+                            </div>
+                            <span class="cl-arr ">→</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mathis-hamri-26070b370/ " target="_blank " class="cl ">
+                            <div class="cl-icon ">👔</div>
+                            <div class="cl-body ">
+                                <div class="cl-name ">LinkedIn</div>
+                                <div class="cl-val ">linkedin.com/in/mathis-hamri-26070b370</div>
+                            </div>
+                            <span class="cl-arr ">→</span>
+                        </a>
+                        <a href="https://github.com/mathisdjango " target="_blank " class="cl ">
+                            <div class="cl-icon ">🐱</div>
+                            <div class="cl-body ">
+                                <div class="cl-name ">GitHub</div>
+                                <div class="cl-val ">github.com/mathisdjango</div>
+                            </div>
+                            <span class="cl-arr ">→</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER  -->
+    <footer>
+        <span class="footer-logo ">~/HAMRI Mathis</span>
+        <span>© 2026 — HTML · CSS · JS</span>
+        <span>Paris, France</span>
+    </footer>
+
+    <div class="toast " id="toast "></div>
+
+    <script src="script.js "></script>
+</body>
+
+</html>
